@@ -126,10 +126,19 @@ public class InAppBrowserActivity extends AppCompatActivity {
     if (options.toolbarTopFixedTitle != null && !options.toolbarTopFixedTitle.isEmpty())
       actionBar.setTitle(options.toolbarTopFixedTitle);
 
+    if (options.showToolbarBackButton) {
+      actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_HOME_AS_UP
+              ,ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_HOME_AS_UP);
+    }
+
   }
 
   @Override
   public boolean onCreateOptionsMenu(Menu m) {
+    if (options.hideMenu) {
+      return false;
+    }
+
     menu = m;
 
     MenuInflater inflater = getMenuInflater();
@@ -186,6 +195,20 @@ public class InAppBrowserActivity extends AppCompatActivity {
     });
 
     return true;
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    if (item.getItemId() == android.R.id.home) {
+      if (canGoBack()) {
+        goBack();
+      } else {
+        closeButtonClicked(item);
+      }
+      return true;
+    }
+
+    return super.onOptionsItemSelected(item);
   }
 
   public String getUrl() {

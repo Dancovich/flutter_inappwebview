@@ -13,4 +13,7 @@ public class InAppBrowserOptions extends Options {
   public boolean hideTitleBar = false;
   public boolean closeOnCannotGoBack = true;
   public boolean progressBar = true;
+
+  public boolean hideMenu = false;
+  public boolean showToolbarBackButton = false;
 }

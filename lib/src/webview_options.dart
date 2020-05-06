@@ -550,7 +550,8 @@ class AndroidInAppWebViewOptions
     options.thirdPartyCookiesEnabled = map["thirdPartyCookiesEnabled"];
     options.hardwareAcceleration = map["hardwareAcceleration"];
     options.supportMultipleWindows = map["supportMultipleWindows"];
-    options.regexToCancelSubFramesLoading = map["regexToCancelSubFramesLoading"];
+    options.regexToCancelSubFramesLoading =
+        map["regexToCancelSubFramesLoading"];
     return options;
   }
 }
@@ -660,7 +661,8 @@ class IOSInAppWebViewOptions
       "selectionGranularity": selectionGranularity.toValue(),
       "dataDetectorTypes": dataDetectorTypesList,
       "sharedCookiesEnabled": sharedCookiesEnabled,
-      "automaticallyAdjustsScrollIndicatorInsets": automaticallyAdjustsScrollIndicatorInsets
+      "automaticallyAdjustsScrollIndicatorInsets":
+          automaticallyAdjustsScrollIndicatorInsets
     };
   }
 
@@ -694,7 +696,8 @@ class IOSInAppWebViewOptions
             map["selectionGranularity"]);
     options.dataDetectorTypes = dataDetectorTypes;
     options.sharedCookiesEnabled = map["sharedCookiesEnabled"];
-    options.automaticallyAdjustsScrollIndicatorInsets = map["automaticallyAdjustsScrollIndicatorInsets"];
+    options.automaticallyAdjustsScrollIndicatorInsets =
+        map["automaticallyAdjustsScrollIndicatorInsets"];
     return options;
   }
 }
@@ -755,11 +758,20 @@ class AndroidInAppBrowserOptions implements BrowserOptions, AndroidOptions {
   ///Set to `false` to hide the progress bar at the bottom of the toolbar at the top. The default value is `true`.
   bool progressBar;
 
-  AndroidInAppBrowserOptions(
-      {this.hideTitleBar = true,
-      this.toolbarTopFixedTitle = "",
-      this.closeOnCannotGoBack = true,
-      this.progressBar = true});
+  ///Set to `true` to show the UP button on the top left of the action bar. Default is `false`
+  bool showToolbarBackButton;
+
+  ///Set to `true` to hide the menu containing options to go forward, back, reload the page, search and close the webview. Default is `false`
+  bool hideMenu;
+
+  AndroidInAppBrowserOptions({
+    this.hideTitleBar = true,
+    this.toolbarTopFixedTitle = "",
+    this.closeOnCannotGoBack = true,
+    this.progressBar = true,
+    this.showToolbarBackButton = false,
+    this.hideMenu = false,
+  });
 
   @override
   Map<String, dynamic> toMap() {
@@ -768,6 +780,8 @@ class AndroidInAppBrowserOptions implements BrowserOptions, AndroidOptions {
       "toolbarTopFixedTitle": toolbarTopFixedTitle,
       "closeOnCannotGoBack": closeOnCannotGoBack,
       "progressBar": progressBar,
+      "showToolbarBackButton": showToolbarBackButton,
+      "hideMenu": hideMenu,
     };
   }
 
@@ -777,6 +791,8 @@ class AndroidInAppBrowserOptions implements BrowserOptions, AndroidOptions {
     options.toolbarTopFixedTitle = map["toolbarTopFixedTitle"];
     options.closeOnCannotGoBack = map["closeOnCannotGoBack"];
     options.progressBar = map["progressBar"];
+    options.showToolbarBackButton = map["showToolbarBackButton"];
+    options.hideMenu = map["hideMenu"];
     return options;
   }
 }
