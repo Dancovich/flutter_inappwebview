@@ -28,14 +28,19 @@ public class ChromeCustomTabsOptions extends Options {
         switch (field) {
             case "addShareButton":
                 addShareButton = (boolean) value;
+                break;
             case "showTitle":
                 showTitle = (boolean) value;
+                break;
             case "toolbarBackgroundColor":
                 toolbarBackgroundColor = value != null ? value.toString() : "";
+                break;
             case "enableUrlBarHiding":
                 enableUrlBarHiding = (boolean) value;
+                break;
             case "instantAppsEnabled":
                 instantAppsEnabled = (boolean) value;
+                break;
         }
     }
 

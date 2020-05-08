@@ -22,24 +22,34 @@ public class InAppBrowserOptions extends Options {
         switch (field) {
             case "hidden":
                 hidden = (boolean) value;
+                break;
             case "toolbarTop":
                 toolbarTop = (boolean) value;
+                break;
             case "toolbarTopBackgroundColor":
                 toolbarTopBackgroundColor = value != null ? value.toString() : "";
+                break;
             case "toolbarTopFixedTitle":
                 toolbarTopFixedTitle = value != null ? value.toString() : "";
+                break;
             case "hideUrlBar":
                 hideUrlBar = (boolean) value;
+                break;
             case "hideTitleBar":
                 hideTitleBar = (boolean) value;
+                break;
             case "closeOnCannotGoBack":
                 closeOnCannotGoBack = (boolean) value;
+                break;
             case "progressBar":
                 progressBar = (boolean) value;
+                break;
             case "hideMenu":
                 hideMenu = (boolean) value;
+                break;
             case "showToolbarBackButton":
                 showToolbarBackButton = (boolean) value;
+                break;
         }
     }
 
