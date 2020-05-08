@@ -21,10 +21,10 @@ public class InAppBrowserOptions extends Options {
     public void setValueForField(String field, Object value) {
         switch (field) {
             case "hidden":
-                hidden = (boolean) value;
+                if (value != null) hidden = (boolean) value;
                 break;
             case "toolbarTop":
-                toolbarTop = (boolean) value;
+                if (value != null) toolbarTop = (boolean) value;
                 break;
             case "toolbarTopBackgroundColor":
                 toolbarTopBackgroundColor = value != null ? value.toString() : "";
@@ -33,22 +33,22 @@ public class InAppBrowserOptions extends Options {
                 toolbarTopFixedTitle = value != null ? value.toString() : "";
                 break;
             case "hideUrlBar":
-                hideUrlBar = (boolean) value;
+                if (value != null) hideUrlBar = (boolean) value;
                 break;
             case "hideTitleBar":
-                hideTitleBar = (boolean) value;
+                if (value != null) hideTitleBar = (boolean) value;
                 break;
             case "closeOnCannotGoBack":
-                closeOnCannotGoBack = (boolean) value;
+                if (value != null) closeOnCannotGoBack = (boolean) value;
                 break;
             case "progressBar":
-                progressBar = (boolean) value;
+                if (value != null) progressBar = (boolean) value;
                 break;
             case "hideMenu":
-                hideMenu = (boolean) value;
+                if (value != null) hideMenu = (boolean) value;
                 break;
             case "showToolbarBackButton":
-                showToolbarBackButton = (boolean) value;
+                if (value != null) showToolbarBackButton = (boolean) value;
                 break;
         }
     }

@@ -85,16 +85,16 @@ public class InAppWebViewOptions extends Options {
     public void setValueForField(String field, Object value) {
         switch (field) {
             case "useShouldOverrideUrlLoading":
-                useShouldOverrideUrlLoading = (boolean) value;
+                if (value != null) useShouldOverrideUrlLoading = (boolean) value;
                 break;
             case "useOnDownloadStart":
-                useOnDownloadStart = (boolean) value;
+                if (value != null) useOnDownloadStart = (boolean) value;
                 break;
             case "useOnLoadResource":
-                useOnLoadResource = (boolean) value;
+                if (value != null) useOnLoadResource = (boolean) value;
                 break;
             case "clearCache":
-                clearCache = (boolean) value;
+                if (value != null) clearCache = (boolean) value;
                 break;
             case "userAgent":
                 userAgent = (String) value;
@@ -103,25 +103,25 @@ public class InAppWebViewOptions extends Options {
                 applicationNameForUserAgent = (String) value;
                 break;
             case "javaScriptEnabled":
-                javaScriptEnabled = (boolean) value;
+                if (value != null) javaScriptEnabled = (boolean) value;
                 break;
             case "debuggingEnabled":
-                debuggingEnabled = (boolean) value;
+                if (value != null) debuggingEnabled = (boolean) value;
                 break;
             case "javaScriptCanOpenWindowsAutomatically":
-                javaScriptCanOpenWindowsAutomatically = (boolean) value;
+                if (value != null) javaScriptCanOpenWindowsAutomatically = (boolean) value;
                 break;
             case "mediaPlaybackRequiresUserGesture":
-                mediaPlaybackRequiresUserGesture = (boolean) value;
+                if (value != null) mediaPlaybackRequiresUserGesture = (boolean) value;
                 break;
             case "minimumFontSize":
-                minimumFontSize = (int) value;
+                if (value != null) minimumFontSize = (int) value;
                 break;
             case "verticalScrollBarEnabled":
-                verticalScrollBarEnabled = (boolean) value;
+                if (value != null) verticalScrollBarEnabled = (boolean) value;
                 break;
             case "horizontalScrollBarEnabled":
-                horizontalScrollBarEnabled = (boolean) value;
+                if (value != null) horizontalScrollBarEnabled = (boolean) value;
                 break;
             case "resourceCustomSchemes":
                 //noinspection unchecked
@@ -132,97 +132,97 @@ public class InAppWebViewOptions extends Options {
                 contentBlockers = (List<Map<String, Map<String, Object>>>) value;
                 break;
             case "preferredContentMode":
-                preferredContentMode = (int) value;
+                if (value != null) preferredContentMode = (int) value;
                 break;
             case "useShouldInterceptAjaxRequest":
-                useShouldInterceptAjaxRequest = (boolean) value;
+                if (value != null) useShouldInterceptAjaxRequest = (boolean) value;
                 break;
             case "useShouldInterceptFetchRequest":
-                useShouldInterceptFetchRequest = (boolean) value;
+                if (value != null) useShouldInterceptFetchRequest = (boolean) value;
                 break;
             case "incognito":
-                incognito = (boolean) value;
+                if (value != null) incognito = (boolean) value;
                 break;
             case "cacheEnabled":
-                cacheEnabled = (boolean) value;
+                if (value != null) cacheEnabled = (boolean) value;
                 break;
             case "transparentBackground":
-                transparentBackground = (boolean) value;
+                if (value != null) transparentBackground = (boolean) value;
                 break;
             case "disableVerticalScroll":
-                disableVerticalScroll = (boolean) value;
+                if (value != null) disableVerticalScroll = (boolean) value;
                 break;
             case "disableHorizontalScroll":
-                disableHorizontalScroll = (boolean) value;
+                if (value != null) disableHorizontalScroll = (boolean) value;
                 break;
             case "textZoom":
-                textZoom = (int) value;
+                if (value != null) textZoom = (int) value;
                 break;
             case "clearSessionCache":
-                clearSessionCache = (boolean) value;
+                if (value != null) clearSessionCache = (boolean) value;
                 break;
             case "builtInZoomControls":
-                builtInZoomControls = (boolean) value;
+                if (value != null) builtInZoomControls = (boolean) value;
                 break;
             case "displayZoomControls":
-                displayZoomControls = (boolean) value;
+                if (value != null) displayZoomControls = (boolean) value;
                 break;
             case "supportZoom":
-                supportZoom = (boolean) value;
+                if (value != null) supportZoom = (boolean) value;
                 break;
             case "databaseEnabled":
-                databaseEnabled = (boolean) value;
+                if (value != null) databaseEnabled = (boolean) value;
                 break;
             case "domStorageEnabled":
-                domStorageEnabled = (boolean) value;
+                if (value != null) domStorageEnabled = (boolean) value;
                 break;
             case "useWideViewPort":
-                useWideViewPort = (boolean) value;
+                if (value != null) useWideViewPort = (boolean) value;
                 break;
             case "safeBrowsingEnabled":
-                safeBrowsingEnabled = (boolean) value;
+                if (value != null) safeBrowsingEnabled = (boolean) value;
                 break;
             case "mixedContentMode":
-                mixedContentMode = (int) value;
+                if (value != null) mixedContentMode = (int) value;
                 break;
             case "allowContentAccess":
-                allowContentAccess = (boolean) value;
+                if (value != null) allowContentAccess = (boolean) value;
                 break;
             case "allowFileAccess":
-                allowFileAccess = (boolean) value;
+                if (value != null) allowFileAccess = (boolean) value;
                 break;
             case "allowFileAccessFromFileURLs":
-                allowFileAccessFromFileURLs = (boolean) value;
+                if (value != null) allowFileAccessFromFileURLs = (boolean) value;
                 break;
             case "allowUniversalAccessFromFileURLs":
-                allowUniversalAccessFromFileURLs = (boolean) value;
+                if (value != null) allowUniversalAccessFromFileURLs = (boolean) value;
                 break;
             case "appCachePath":
                 appCachePath = (String) value;
                 break;
             case "blockNetworkImage":
-                blockNetworkImage = (boolean) value;
+                if (value != null) blockNetworkImage = (boolean) value;
                 break;
             case "blockNetworkLoads":
-                blockNetworkLoads = (boolean) value;
+                if (value != null) blockNetworkLoads = (boolean) value;
                 break;
             case "cacheMode":
-                cacheMode = (int) value;
+                if (value != null) cacheMode = (int) value;
                 break;
             case "cursiveFontFamily":
                 cursiveFontFamily = (String) value;
                 break;
             case "defaultFixedFontSize":
-                defaultFixedFontSize = (int) value;
+                if (value != null) defaultFixedFontSize = (int) value;
                 break;
             case "defaultFontSize":
-                defaultFontSize = (int) value;
+                if (value != null) defaultFontSize = (int) value;
                 break;
             case "defaultTextEncodingName":
                 defaultTextEncodingName = (String) value;
                 break;
             case "disabledActionModeMenuItems":
-                disabledActionModeMenuItems = (int) value;
+                if (value != null) disabledActionModeMenuItems = (int) value;
                 break;
             case "fantasyFontFamily":
                 fantasyFontFamily = (String) value;
@@ -231,31 +231,31 @@ public class InAppWebViewOptions extends Options {
                 fixedFontFamily = (String) value;
                 break;
             case "forceDark":
-                forceDark = (int) value;
+                if (value != null) forceDark = (int) value;
                 break;
             case "geolocationEnabled":
-                geolocationEnabled = (boolean) value;
+                if (value != null) geolocationEnabled = (boolean) value;
                 break;
             case "layoutAlgorithm":
                 setLayoutAlgorithm(value);
                 break;
             case "loadWithOverviewMode":
-                loadWithOverviewMode = (boolean) value;
+                if (value != null) loadWithOverviewMode = (boolean) value;
                 break;
             case "loadsImagesAutomatically":
-                loadsImagesAutomatically = (boolean) value;
+                if (value != null) loadsImagesAutomatically = (boolean) value;
                 break;
             case "minimumLogicalFontSize":
-                minimumLogicalFontSize = (int) value;
+                if (value != null) minimumLogicalFontSize = (int) value;
                 break;
             case "initialScale":
-                initialScale = (int) value;
+                if (value != null) initialScale = (int) value;
                 break;
             case "needInitialFocus":
-                needInitialFocus = (boolean) value;
+                if (value != null) needInitialFocus = (boolean) value;
                 break;
             case "offscreenPreRaster":
-                offscreenPreRaster = (boolean) value;
+                if (value != null) offscreenPreRaster = (boolean) value;
                 break;
             case "sansSerifFontFamily":
                 sansSerifFontFamily = (String) value;
@@ -267,16 +267,16 @@ public class InAppWebViewOptions extends Options {
                 standardFontFamily = (String) value;
                 break;
             case "saveFormData":
-                saveFormData = (boolean) value;
+                if (value != null) saveFormData = (boolean) value;
                 break;
             case "thirdPartyCookiesEnabled":
-                thirdPartyCookiesEnabled = (boolean) value;
+                if (value != null) thirdPartyCookiesEnabled = (boolean) value;
                 break;
             case "hardwareAcceleration":
-                hardwareAcceleration = (boolean) value;
+                if (value != null) hardwareAcceleration = (boolean) value;
                 break;
             case "supportMultipleWindows":
-                supportMultipleWindows = (boolean) value;
+                if (value != null) supportMultipleWindows = (boolean) value;
                 break;
             case "regexToCancelSubFramesLoading":
                 regexToCancelSubFramesLoading = (String) value;
